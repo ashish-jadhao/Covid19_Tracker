@@ -1,0 +1,32 @@
+<!-- <h1>Covid19 Tracker</h1> -->
+
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Covid19 Tracker</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+  </head>
+
+  <body>
+  
+   <!-- <p th:text="${testName}"></p> --> 
+    
+    <table>
+      <tr>
+        
+        <th>Country</th>
+        <th>Total Deaths</th>
+      </tr>
+      <tr th:each="locationStat : ${locationStats}">
+       
+        <td th:text="${locationStat.country}"></td>
+        <td th:text="${locationStat.latestTotalDeaths}">0</td>
+      </tr>
+    </table>
+  
+  </body>
+
+</html>
